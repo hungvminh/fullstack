@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
-    "watch:serve": "ts-node src/index.ts"
+    "watch:serve": "ts-node src/index.ts",
+    "test:gemini-compat": "ts-node src/modules/common/geminiChatCompat.test.ts"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.4.5",
