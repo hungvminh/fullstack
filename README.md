@@ -49,3 +49,10 @@ yarn gen:types:watch
 ## License
 
 [MIT](LICENSE)
+
+## Gemini CLI -> ChatGPT-style API compatibility
+
+A helper was added at `server/src/modules/common/geminiChatCompat.ts` to bridge Gemini-style request/response shapes to OpenAI Chat Completions-compatible payloads.
+
+- `toGeminiContents(messages)` converts ChatGPT-style messages (`system`/`user`/`assistant`) into Gemini `contents`.
+- `toOpenAIChatCompletion(geminiResponse, model, id?)` converts Gemini response candidates and usage metadata into a Chat Completions response object.
